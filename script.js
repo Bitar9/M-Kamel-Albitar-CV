@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Data Analysis with Python",
             url: "certificates/Data_Analysis_with_Python.pdf",
             issuer: "cognitiveclass.ai",
-            date: "2022-03-18"
+            date: "2023-12-28"
         },
         {
             title: "Emotional Intelligence",
@@ -43,6 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2018-12-12"
         }
     ];
+
+    // Sort certifications by date from oldest to newest
+    certifications.sort((a, b) => new Date(a.date) - new Date(b.date));
 
     const certList = document.getElementById('cert-list');
 
