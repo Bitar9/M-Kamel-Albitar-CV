@@ -51,4 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
         listItem.innerHTML = `<a href="${cert.url}" target="_blank">${cert.title}</a> - Issued by ${cert.issuer} on ${cert.date}`;
         certList.appendChild(listItem);
     });
+
+    const cvButton = document.getElementById('cv-button');
+    cvButton.addEventListener('click', () => {
+        window.open('certificates/your_cv.pdf', '_blank');
+    });
 });
