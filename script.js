@@ -1,16 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const certifications = [
         {
-            title: "Data Science & Machine Learning",
-            url: "certificates/Data_Science_Machine_Learning.pdf",
+            title: "The Upper-Intermediate Level (B2)",
+            url: "certificates/Upper_Intermediate_Level_B2.pdf",
             issuer: "Edraak.org",
-            date: "2020-05-10"
-        },
-        {
-            title: "Protect Systems from Penetrations",
-            url: "certificates/Protect_Systems_from_Penetrations.pdf",
-            issuer: "Edraak.org",
-            date: "2021-06-15"
+            date: "2018-12-12"
         },
         {
             title: "Computer Essentials",
@@ -22,30 +16,34 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Advanced Excel - (2)",
             url: "certificates/Advanced_Excel_2.pdf",
             issuer: "Edraak.org",
-            date: "2021-10-05"
+            date: "2022-11-05"
         },
         {
-            title: "Data Analysis with Python",
-            url: "certificates/Data_Analysis_with_Python.pdf",
-            issuer: "cognitiveclass.ai",
-            date: "2023-12-28"
+            title: "Data Science & Machine Learning",
+            url: "certificates/Data_Science_Machine_Learning.pdf",
+            issuer: "Edraak.org",
+            date: "2022-11-15"
         },
         {
             title: "Emotional Intelligence",
             url: "certificates/Emotional_Intelligence.pdf",
             issuer: "Edraak.org",
-            date: "2020-11-22"
+            date: "2022-11-15"
         },
         {
-            title: "The Upper-Intermediate Level (B2)",
-            url: "certificates/Upper_Intermediate_Level_B2.pdf",
+            title: "Protect Systems from Penetrations",
+            url: "certificates/Protect_Systems_from_Penetrations.pdf",
             issuer: "Edraak.org",
-            date: "2018-12-12"
+            date: "2022-11-15"
+        },
+
+        {
+            title: "Data Analysis with Python",
+            url: "certificates/Data_Analysis_with_Python.pdf",
+            issuer: "cognitiveclass.ai",
+            date: "2023-12-28"
         }
     ];
-
-    // Sort certifications by date from oldest to newest
-    certifications.sort((a, b) => new Date(a.date) - new Date(b.date));
 
     const certList = document.getElementById('cert-list');
 
