@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "CS50",
             issuer: "Harvard.edu",
             date: "August 2024",
-            url: "CS50.pdf",
+            url: "Cs50.pdf",
             logo: "harvard_logo.png"
         },
         // More certifications here
