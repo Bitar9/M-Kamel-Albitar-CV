@@ -1,51 +1,60 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min Personliga Hemsida</title>
+    <title>M-Kamel Albitar - Professional CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
+            <div class="logo">M-Kamel Albitar</div>
             <ul>
-                <li><a href="#hem">Hem</a></li>
-                <li><a href="#certifieringar">Certifieringar</a></li>
-                <li><a href="#om-mig">Om Mig</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="language-switcher">
+                <button id="en" class="active">English</button>
+                <button id="sv">Svenska</button>
+            </div>
         </nav>
     </header>
-    
-    <section id="hem">
-        <div class="intro">
-            <h1>Välkommen till Min Personliga Hemsida</h1>
-            <p>Hej! Jag är M-kamel Albitar, en student passionerad för Programmering. Utforska mina certifieringar och lär dig mer om mig.</p>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 data-en="Welcome to My Professional CV" data-sv="Välkommen till mitt professionella CV">Welcome to My Professional CV</h1>
+            <p data-en="Hello! I am M-Kamel Albitar, a passionate programming student. Explore my certifications and learn more about me." data-sv="Hej! Jag är M-Kamel Albitar, en passionerad programmeringsstudent. Utforska mina certifikat och lär dig mer om mig.">Hello! I am M-Kamel Albitar, a passionate programming student. Explore my certifications and learn more about me.</p>
+            <a href="#about" class="btn" data-en="Learn More" data-sv="Lär dig mer">Learn More</a>
         </div>
     </section>
-    
-    <section id="certifieringar">
-        <h2>Mina Certifieringar</h2>
-        <ul id="cert-list">
-            <!-- Certifieringar kommer att läggas till här dynamiskt -->
-        </ul>
+
+    <section id="certifications" class="certifications">
+        <h2 data-en="My Certifications" data-sv="Mina Certifikat">My Certifications</h2>
+        <div class="cert-grid">
+            <!-- Certification cards will be added dynamically -->
+        </div>
     </section>
-    
-    <section id="om-mig">
-        <h2>Om Mig</h2>
-        <p>Jag är M-kamel Albitar, för närvarande studerar jag i skolan Montesorri Mondial. Jag har ett stort intresse för Programmering och Marketing. Under årens lopp har jag slutfört flera online-certifieringar för att förbättra mina färdigheter inom olika säker och får bättre kompetenser.</p>
-        <button id="cv-button">Ladda ner mitt CV</button>
+
+    <section id="about" class="about">
+        <h2 data-en="About Me" data-sv="Om Mig">About Me</h2>
+        <p data-en="I am M-Kamel Albitar, currently studying at Montessori Mondial School. I have a strong interest in programming and marketing. Over the years, I have completed several online certifications to enhance my skills in various fields." data-sv="Jag är M-Kamel Albitar och studerar för närvarande vid Montessori Mondial School. Jag har ett starkt intresse för programmering och marknadsföring. Under åren har jag genomfört flera online-certifikat för att förbättra mina färdigheter inom olika områden.">I am M-Kamel Albitar, currently studying at Montessori Mondial School. I have a strong interest in programming and marketing. Over the years, I have completed several online certifications to enhance my skills in various fields.</p>
+        <a href="certificates/your_cv.pdf" class="btn" target="_blank" data-en="Download My CV" data-sv="Ladda ner mitt CV">Download My CV</a>
     </section>
-    
-    <section id="kontakt">
-        <h2>Kontakta Mig</h2>
-        <p>Du kan nå mig via e-post på <a href="mailto:mohamedalbitar066@gmail.com">mohamedalbitar066@gmail.com</a>.</p>
-        <p>Anslut med mig på <a href="https://www.linkedin.com/in/mohamd-kamel-albitar-0b577b202/" target="_blank">LinkedIn</a>.</p>
+
+    <section id="contact" class="contact">
+        <h2 data-en="Contact Information" data-sv="Kontaktinformation">Contact Information</h2>
+        <div class="contact-info">
+            <p><strong data-en="Email:" data-sv="E-post:">Email:</strong> <a href="mailto:mohamedalbitar066@gmail.com">mohamedalbitar066@gmail.com</a></p>
+            <p><strong data-en="LinkedIn:" data-sv="LinkedIn:">LinkedIn:</strong> <a href="https://www.linkedin.com/in/mohamd-kamel-albitar-0b577b202/" target="_blank">linkedin.com/in/mohamd-kamel-albitar</a></p>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 M-kamel Albitar. All rights reserved.</p>
+        <p>&copy; 2024 M-Kamel Albitar. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>

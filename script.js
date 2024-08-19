@@ -4,57 +4,115 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "The Upper-Intermediate Level (B2)",
             url: "certificates/Upper_Intermediate_Level_B2.pdf",
             issuer: "Edraak.org",
-            date: "2018-12-12"
+            date: "2018-12-12",
+            logo: "images/edraak_logo.png"
         },
         {
             title: "Computer Essentials",
             url: "certificates/Computer_Essentials.pdf",
             issuer: "Edraak.org",
-            date: "2019-08-20"
+            date: "2019-08-20",
+            logo: "images/edraak_logo.png"
         },
         {
             title: "Advanced Excel - (2)",
             url: "certificates/Advanced_Excel_2.pdf",
             issuer: "Edraak.org",
-            date: "2022-11-05"
+            date: "2022-11-05",
+            logo: "images/edraak_logo.png"
         },
         {
             title: "Data Science & Machine Learning",
             url: "certificates/Data_Science_Machine_Learning.pdf",
             issuer: "Edraak.org",
-            date: "2022-11-15"
+            date: "2022-11-15",
+            logo: "images/edraak_logo.png"
         },
         {
             title: "Emotional Intelligence",
             url: "certificates/Emotional_Intelligence.pdf",
             issuer: "Edraak.org",
-            date: "2022-11-15"
+            date: "2022-11-15",
+            logo: "images/edraak_logo.png"
         },
         {
             title: "Protect Systems from Penetrations",
             url: "certificates/Protect_Systems_from_Penetrations.pdf",
             issuer: "Edraak.org",
-            date: "2022-11-15"
+            date: "2022-11-15",
+            logo: "images/edraak_logo.png"
         },
-
         {
             title: "Data Analysis with Python",
             url: "certificates/Data_Analysis_with_Python.pdf",
             issuer: "cognitiveclass.ai",
-            date: "2023-12-28"
+            date: "2023-12-28",
+            logo: "images/cognitiveclass_logo.png"
+        },
+        {
+            title: "CS50 with Harvard",
+            url: "certificates/Cs50.pdf",
+            issuer: "Harvard.edu",
+            date: "2024",
+            logo: "images/harvard_logo.png"
         }
     ];
 
-    const certList = document.getElementById('cert-list');
+    const certGrid = document.querySelector('.cert-grid');
 
     certifications.forEach(cert => {
-        const listItem = document.createElement('li');
-        listItem.innerHTML = `<a href="${cert.url}" target="_blank">${cert.title}</a> - Issued by ${cert.issuer} on ${cert.date}`;
-        certList.appendChild(listItem);
+        const certCard = document.createElement('div');
+        certCard.classList.add('cert-card');
+        if (cert.issuer === "Harvard.edu") {
+            certCard.classList.add('latest');
+            certCard.innerHTML = `
+                <img src="${cert.logo}" alt="${cert.issuer} Logo">
+                <div>
+                    <h3>${cert.title}</h3>
+                    <p>Issued by ${cert.issuer} on ${cert.date}</p>
+                    <a href="${cert.url}" target="_blank" class="btn" data-en="View Certificate" data-sv="Visa Certifikat">View Certificate</a>
+                </div>
+                <div class="banner">Latest</div>
+            `;
+        } else {
+            certCard.innerHTML = `
+                <img src="${cert.logo}" alt="${cert.issuer} Logo">
+                <div>
+                    <h3>${cert.title}</h3>
+                    <p>Issued by ${cert.issuer} on ${cert.date}</p>
+                    <a href="${cert.url}" target="_blank" class="btn" data-en="View Certificate" data-sv="Visa Certifikat">View Certificate</a>
+                </div>
+            `;
+        }
+        certCard.addEventListener('click', () => {
+            certCard.classList.toggle('expanded');
+        });
+        certGrid.appendChild(certCard);
     });
 
-    const cvButton = document.getElementById('cv-button');
-    cvButton.addEventListener('click', () => {
-        window.open('certificates/your_cv.pdf', '_blank');
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Language Switcher
+    const languageSwitcher = document.querySelector('.language-switcher');
+    const elementsToTranslate = document.querySelectorAll('[data-en]');
+
+    languageSwitcher.addEventListener('click', (e) => {
+        if (e.target.tagName === 'BUTTON') {
+            const lang = e.target.id;
+            document.querySelectorAll('.language-switcher button').forEach(button => {
+                button.classList.toggle('active', button.id === lang);
+            });
+            elementsToTranslate.forEach(element => {
+                element.textContent = element.getAttribute(`data-${lang}`);
+            });
+        }
     });
 });
