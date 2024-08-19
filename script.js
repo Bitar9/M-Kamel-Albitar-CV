@@ -1,61 +1,61 @@
 document.addEventListener('DOMContentLoaded', () => {
     const certifications = [
         {
-            title: "The Upper-Intermediate Level (B2)",
-            url: "certificates/Upper_Intermediate_Level_B2.pdf",
-            issuer: "Edraak.org",
-            date: "2018-12-12",
-            logo: "edraak_logo.png"
-        },
-        {
-            title: "Computer Essentials",
-            url: "certificates/Computer_Essentials.pdf",
-            issuer: "Edraak.org",
-            date: "2019-08-20",
-            logo: "edraak_logo.png"
-        },
-        {
-            title: "Advanced Excel - (2)",
-            url: "certificates/Advanced_Excel_2.pdf",
-            issuer: "Edraak.org",
-            date: "2022-6-05",
-            logo: "edraak_logo.png"
-        },
-        {
-            title: "Data Science & Machine Learning",
-            url: "certificates/Data_Science_Machine_Learning.pdf",
-            issuer: "Edraak.org",
-            date: "2022-8-15",
-            logo: "edraak_logo.png"
-        },
-        {
-            title: "Emotional Intelligence",
-            url: "certificates/Emotional_Intelligence.pdf",
-            issuer: "Edraak.org",
-            date: "2022-10-15",
-            logo: "edraak_logo.png"
-        },
-        {
-            title: "Protect Systems from Penetrations",
-            url: "certificates/Protect_Systems_from_Penetrations.pdf",
-            issuer: "Edraak.org",
-            date: "2022-11-15",
-            logo: "edraak_logo.png"
-        },
-        {
-            title: "Data Analysis with Python",
-            url: "certificates/Data_Analysis_with_Python.pdf",
-            issuer: "cognitiveclass.ai",
-            date: "2023-12-28",
-            logo: "cognitiveclass_logo.png"
-        },
-        {
-            title: "CS50",
-            issuer: "Harvard.edu",
-            date: "August 2024",
-            url: "Cs50.pdf",
-            logo: "harvard_logo.png"
-        },
+        title: "CS50",
+        issuer: "Harvard.edu",
+        date: "August 2024",
+        url: "Cs50.pdf",
+        logo: "harvard_logo.png"
+    },
+    {
+        title: "Data Analysis with Python",
+        url: "certificates/Data_Analysis_with_Python.pdf",
+        issuer: "cognitiveclass.ai",
+        date: "2023-12-28",
+        logo: "cognitiveclass_logo.png"
+    },
+    {
+        title: "Protect Systems from Penetrations",
+        url: "certificates/Protect_Systems_from_Penetrations.pdf",
+        issuer: "Edraak.org",
+        date: "2022-11-15",
+        logo: "edraak_logo.png"
+    },
+    {
+        title: "Emotional Intelligence",
+        url: "certificates/Emotional_Intelligence.pdf",
+        issuer: "Edraak.org",
+        date: "2022-10-15",
+        logo: "edraak_logo.png"
+    },
+    {
+        title: "Data Science & Machine Learning",
+        url: "certificates/Data_Science_Machine_Learning.pdf",
+        issuer: "Edraak.org",
+        date: "2022-08-15",
+        logo: "edraak_logo.png"
+    },
+    {
+        title: "Advanced Excel - (2)",
+        url: "certificates/Advanced_Excel_2.pdf",
+        issuer: "Edraak.org",
+        date: "2022-06-05",
+        logo: "edraak_logo.png"
+    },
+    {
+        title: "Computer Essentials",
+        url: "certificates/Computer_Essentials.pdf",
+        issuer: "Edraak.org",
+        date: "2019-08-20",
+        logo: "edraak_logo.png"
+    },
+    {
+        title: "The Upper-Intermediate Level (B2)",
+        url: "certificates/Upper_Intermediate_Level_B2.pdf",
+        issuer: "Edraak.org",
+        date: "2018-12-12",
+        logo: "edraak_logo.png"
+    }
         // More certifications here
     ];
 
