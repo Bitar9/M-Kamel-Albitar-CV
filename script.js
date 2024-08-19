@@ -5,57 +5,58 @@ document.addEventListener('DOMContentLoaded', () => {
             url: "certificates/Upper_Intermediate_Level_B2.pdf",
             issuer: "Edraak.org",
             date: "2018-12-12",
-            logo: "images/edraak_logo.png"
+            logo: "edraak_logo.png"
         },
         {
             title: "Computer Essentials",
             url: "certificates/Computer_Essentials.pdf",
             issuer: "Edraak.org",
             date: "2019-08-20",
-            logo: "images/edraak_logo.png"
+            logo: "edraak_logo.png"
         },
         {
             title: "Advanced Excel - (2)",
             url: "certificates/Advanced_Excel_2.pdf",
             issuer: "Edraak.org",
-            date: "2022-11-05",
-            logo: "images/edraak_logo.png"
+            date: "2022-6-05",
+            logo: "edraak_logo.png"
         },
         {
             title: "Data Science & Machine Learning",
             url: "certificates/Data_Science_Machine_Learning.pdf",
             issuer: "Edraak.org",
-            date: "2022-11-15",
-            logo: "images/edraak_logo.png"
+            date: "2022-8-15",
+            logo: "edraak_logo.png"
         },
         {
             title: "Emotional Intelligence",
             url: "certificates/Emotional_Intelligence.pdf",
             issuer: "Edraak.org",
-            date: "2022-11-15",
-            logo: "images/edraak_logo.png"
+            date: "2022-10-15",
+            logo: "edraak_logo.png"
         },
         {
             title: "Protect Systems from Penetrations",
             url: "certificates/Protect_Systems_from_Penetrations.pdf",
             issuer: "Edraak.org",
             date: "2022-11-15",
-            logo: "images/edraak_logo.png"
+            logo: "edraak_logo.png"
         },
         {
             title: "Data Analysis with Python",
             url: "certificates/Data_Analysis_with_Python.pdf",
             issuer: "cognitiveclass.ai",
             date: "2023-12-28",
-            logo: "images/cognitiveclass_logo.png"
+            logo: "cognitiveclass_logo.png"
         },
         {
-            title: "CS50 with Harvard",
-            url: "certificates/Cs50.pdf",
+            title: "CS50",
             issuer: "Harvard.edu",
-            date: "2024",
-            logo: "images/harvard_logo.png"
-        }
+            date: "August 2024",
+            url: "certificates/CS50.pdf",
+            logo: "harvard_logo.png"
+        },
+        // More certifications here
     ];
 
     const certGrid = document.querySelector('.cert-grid');
@@ -114,5 +115,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 element.textContent = element.getAttribute(`data-${lang}`);
             });
         }
+    });
+
+    // Hamburger Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('header ul');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
     });
 });

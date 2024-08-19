@@ -10,14 +10,15 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: #f4f4f4;
-    background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 50%, #121212 100%);
+    background: linear-gradient(135deg, #1e1e1e 25%, #2a2a2a 50%, #121212 75%);
     overflow-x: hidden;
 }
 
+/* Header Styles */
 header {
     background: rgba(30, 30, 30, 0.9);
     color: #f4f4f4;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: space-between;
@@ -25,6 +26,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 header .logo {
@@ -80,6 +82,80 @@ header ul li a:hover {
     transform: translateY(-2px);
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #f4f4f4;
+}
+
+.hamburger div {
+    background: #f4f4f4;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Navigation Menu (default view) */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
+        background: rgba(30, 30, 30, 0.9);
+    }
+
+    header ul.active {
+        display: flex;
+    }
+
+    header ul li {
+        margin: 0;
+        width: 100%;
+    }
+
+    header ul li a {
+        display: block;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Hamburger Menu Animation */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Hero Section */
 .hero {
     background: url('your-image.jpg') no-repeat center center/cover;
     color: #f4f4f4;
@@ -88,6 +164,7 @@ header ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.7);
     position: relative;
     z-index: 1;
 }
@@ -99,7 +176,7 @@ header ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     z-index: -1;
 }
 
@@ -114,29 +191,117 @@ header ul li a:hover {
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    letter-spacing: 2px;
 }
 
 .hero p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: #ddd;
 }
 
 .btn {
-    background: linear-gradient(90deg, #4a90e2, #357ABD);
+    background: #4a90e2;
     color: #fff;
-    padding: 0.8rem 2.5rem;
-    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: 500;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: background 0.3s ease, transform 0.3s ease;
+    
 }
 
 .btn:hover {
-    background: linear-gradient(90deg, #357ABD, #4a90e2);
+    background: #357ABD;
     transform: translateY(-2px);
+}
+
+/* Certifications Section */
+.certifications {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.certifications h2 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cert-card {
+    background: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.cert-card.latest {
+    border: 2px solid #4a90e2;
+    animation: flash 2s infinite;
+}
+
+.cert-card img {
+    width: 100%;
+    height: auto;
+}
+
+.cert-card div {
+    padding: 1rem;
+}
+
+.cert-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.cert-card p {
+    color: #888;
+}
+
+.cert-card a {
+    display: inline-block;
+    background: #4a90e2;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.cert-card a:hover {
+    background: #357ABD;
+}
+
+.cert-card .banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #4a90e2;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-bottom-left-radius: 10px;
+}
+
+@keyframes flash {
+    0% { border-color: #4a90e2; }
+    50% { border-color: #2a2a2a; }
+    100% { border-color: #4a90e2; }
+}
+
+/* About Section */
+.about p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #bbb;
 }
 
 .certifications, .about, .contact {
@@ -155,85 +320,15 @@ header ul li a:hover {
     letter-spacing: 1px;
 }
 
-.cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+/* Contact Section */
+.contact {
+    padding: 3rem 1rem;
+    text-align: center;
 }
 
-.cert-card {
-    background-color: #292929;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.cert-card img {
-    width: 50px;
-    height: 50px;
-    margin-right: 1rem;
-    border-radius: 50%;
-    object-fit: contain;
-}
-
-.cert-card div {
-    flex: 1;
-}
-
-.cert-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #f4f4f4;
-}
-
-.cert-card p {
-    color: #bbb;
-}
-
-.cert-card a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    display: inline-block;
+.contact-info {
     margin-top: 1rem;
 }
-
-.cert-card a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
-.cert-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-}
-
-.cert-card .banner {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #4a90e2;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.about p {
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #bbb;
-}
-
 .contact-info {
     font-size: 1.2rem;
     color: #bbb;
@@ -251,36 +346,16 @@ header ul li a:hover {
     text-decoration: underline;
 }
 
+/* Footer Styles */
 footer {
-    text-align: center;
-    padding: 1rem 0;
-    background: #1e1e1e;
+    background: rgba(30, 30, 30, 0.9);
     color: #f4f4f4;
-    margin-top: 2rem;
-    letter-spacing: 1px;
+    text-align: center;
+    padding: 1rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    header ul {
-        flex-direction: column;
-        margin-top: 1rem;
-    }
-
-    header ul li {
-        margin: 0.5rem 0;
-    }
-
-    .hero-content {
-        padding: 1.5rem;
-        max-width: 100%;
-    }
-
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -291,30 +366,9 @@ footer {
 
     .btn {
         padding: 0.5rem 1.5rem;
-        font-size: 0.9rem;
     }
 
     .cert-card {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .cert-card img {
-        margin-bottom: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
         font-size: 0.9rem;
-    }
-
-    .btn {
-        padding: 0.4rem 1rem;
-        font-size: 0.8rem;
     }
 }
