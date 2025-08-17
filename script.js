@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const certifications = [
         {
+        title: "CS50 Cybersecurity",
+        issuer: "Harvard.edu",
+        date: "2025",
+        url: "CS50CY.pdf",
+        logo: "harvard_logo.png"
+    },
+        {
         title: "CS50",
         issuer: "Harvard.edu",
         date: "August 2024",
