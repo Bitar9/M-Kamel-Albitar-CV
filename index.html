@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,57 +9,123 @@
     <link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
 <body>
+    <a href="#home" class="skip-link" data-en="Skip to main content" data-sv="Hoppa till huvudinnehåll">Hoppa till huvudinnehåll</a>
     <header>
         <div class="logo">M-Kamel Albitar</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <nav role="navigation" aria-label="Primary">
+            <ul id="primary-navigation">
+                <li><a href="#home" data-en="Home" data-sv="Hem">Hem</a></li>
+                <li><a href="#projects" data-en="Projects" data-sv="Projekt">Projekt</a></li>
+                <li><a href="#skills" data-en="Skills" data-sv="Färdigheter">Färdigheter</a></li>
+                <li><a href="#timeline" data-en="Timeline" data-sv="Tidslinje">Tidslinje</a></li>
+                <li><a href="#certifications" data-en="Certifications" data-sv="Certifikat">Certifikat</a></li>
+                <li><a href="#about" data-en="About Me" data-sv="Om Mig">Om Mig</a></li>
+                <li><a href="#contact" data-en="Contact" data-sv="Kontakt">Kontakt</a></li>
             </ul>
             <div class="language-switcher">
-                <button id="en" class="active">EN</button>
-                <button id="sv">SV</button>
+                <button id="en" aria-pressed="false">EN</button>
+                <button id="sv" class="active" aria-pressed="true">SV</button>
             </div>
-            <div class="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
+            <div class="theme-toggle">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle color theme" aria-pressed="false" data-en="Toggle Theme" data-sv="Byt Tema">Byt Tema</button>
             </div>
+            <button class="hamburger" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Welcome to My Personal HomePage</h1>
-            
-<p data-en="Hello! I am M-Kamel Albitar, a passionate programming student. Explore my certifications and learn more about me."
-data-sv="Hej! Jag är M-Kamel Albitar, en passionerad programmeringsstudent. Utforska mina certifieringar och lär dig mer om mig.">IHello! I am M-Kamel Albitar, a passionate programming student. Explore my certifications and learn more about me.</p>
-            <a href="#about" class="btn" data-en="Learn More" data-sv="Läs Mer">Learn More</a>
+            <h1 class="brand-gradient" data-en="M‑Kamel Albitar" data-sv="M‑Kamel Albitar">M‑Kamel Albitar</h1>
+            <p class="hero-typed"
+               data-en-roles='["Programming Student","Security Enthusiast","CS50 Graduate","Data Explorer"]'
+               data-sv-roles='["Programmeringsstudent","Säkerhetsentusiast","CS50‑examinerad","Datautforskare"]'>
+               Programmeringsstudent
+            </p>
+
+            <div class="hero-badges">
+                <div class="badge featured">
+                    <img src="harvard_logo.png" alt="Harvard University logo">
+                    <span data-en="CS50 Cybersecurity • 2025" data-sv="CS50 Cybersecurity • 2025">CS50 Cybersecurity • 2025</span>
+                </div>
+                <div class="badge">
+                    <img src="harvard_logo.png" alt="Harvard University logo">
+                    <span data-en="CS50 • 2024" data-sv="CS50 • 2024">CS50 • 2024</span>
+                </div>
+                <div class="badge">
+                    <img src="cognitiveclass_logo.png" alt="CognitiveClass.ai logo">
+                    <span data-en="Data Analysis with Python" data-sv="Dataanalys med Python">Dataanalys med Python</span>
+                </div>
+            </div>
+
+            <ul class="hero-stats" aria-label="Snabbfakta">
+                <li><span class="stat-number" id="stat-cert-count">0</span><span class="stat-label" data-en="Certifications" data-sv="Certifikat">Certifikat</span></li>
+                <li><span class="stat-number" id="stat-project-count">0</span><span class="stat-label" data-en="Projects" data-sv="Projekt">Projekt</span></li>
+                <li><span class="stat-number" id="stat-years">0</span><span class="stat-label" data-en="Years Learning" data-sv="År av lärande">År av lärande</span></li>
+            </ul>
+
+            <div class="hero-actions">
+                <a href="#projects" class="btn glow primary" data-en="Se projekt" data-sv="Se projekt">Se projekt</a>
+                <a href="#certifications" class="btn secondary" data-en="Visa Harvard‑certifikat" data-sv="Visa Harvard‑certifikat">Visa Harvard‑certifikat</a>
+            </div>
         </div>
     </section>
 
     <section id="certifications" class="certifications">
-        <h2 data-en="My Certifications" data-sv="Mina Certifikat">My Certifications</h2>
+        <h2 data-en="My Certifications" data-sv="Mina Certifikat">Mina Certifikat</h2>
         <div class="cert-grid">
             <!-- Certifications with logos will be added dynamically -->
         </div>
     </section>
 
     <section id="about" class="about">
-        <h2 data-en="About Me" data-sv="Om Mig">About Me</h2>
-        <p data-en="I am M-Kamel Albitar, currently studying at Montessori Mondial School. I have a strong interest in programming and marketing. Over the years, I have completed several online certifications to enhance my skills in various fields." data-sv="Jag är M-Kamel Albitar, och studerar för närvarande vid Montessori Mondial School. Jag har ett starkt intresse för programmering och marknadsföring. Under åren har jag slutfört flera online-certifieringar för att förbättra mina färdigheter inom olika områden.">I am M-Kamel Albitar, currently studying at Montessori Mondial School. I have a strong interest in programming and marketing. Over the years, I have completed several online certifications to enhance my skills in various fields.</p>
-        <a href="certificates/your_cv.pdf" class="btn" data-en="Download My CV" data-sv="Ladda Ner Mitt CV" target="_blank">Download My CV</a>
+        <h2 data-en="About Me" data-sv="Om Mig">Om Mig</h2>
+        <p data-en=" I am M-Kamel Albitar, a Swedish upper-secondary student specializing in Technology and Media Information. 
+        I focus on programming, cybersecurity, and digital innovation—building projects that blend technical precision with creative design. 
+        I’m driven by curiosity and the challenge of mastering complex systems, from secure networks to data analysis. 
+        My studies, combined with self-directed learning through Harvard’s CS50 and other international programs, have shaped me into a forward-thinking developer ready to make an impact." data-sv="Jag är M-Kamel Albitar, en gymnasiestudent i Sverige med inriktning mot Teknik och Medieinformation. 
+        Jag fokuserar på programmering, cybersäkerhet och digital innovation – och skapar projekt som förenar teknisk precision med kreativ design. 
+        Jag drivs av nyfikenhet och utmaningen att bemästra komplexa system, från säkra nätverk till dataanalys. 
+        Mina studier, tillsammans med självstyrt lärande genom Harvards CS50 och andra internationella program, har format mig till en framtidsinriktad utvecklare redo att göra skillnad.">Jag är M-Kamel Albitar, en gymnasiestudent i Sverige med inriktning mot Teknik och Medieinformation. 
+        Jag fokuserar på programmering, cybersäkerhet och digital innovation – och skapar projekt som förenar teknisk precision med kreativ design. 
+        Jag drivs av nyfikenhet och utmaningen att bemästra komplexa system, från säkra nätverk till dataanalys. 
+        Mina studier, tillsammans med självstyrt lärande genom Harvards CS50 och andra internationella program, har format mig till en framtidsinriktad utvecklare redo att göra skillnad.</p>
+        <a href="certificates/your_cv.pdf" class="btn" data-en="Download My CV" data-sv="Ladda Ner Mitt CV" target="_blank">Ladda Ner Mitt CV</a>
     </section>
 
     <section id="contact" class="contact">
-        <h2 data-en="Contact Information" data-sv="Kontaktinformation">Contact Information</h2>
+        <h2 data-en="Contact Information" data-sv="Kontaktinformation">Kontaktinformation</h2>
         <div class="contact-info">
-            <p><strong data-en="Email:" data-sv="E-post:">Email:</strong> <a href="mailto:mohamedalbitar066@gmail.com">mohamedalbitar066@gmail.com</a></p>
-             
+            <p><strong data-en="Email:" data-sv="E-post:">E-post:</strong> <a href="mailto:mohamedalbitar066@gmail.com">mohamedalbitar066@gmail.com</a></p>
             <p><strong data-en="LinkedIn:" data-sv="LinkedIn:">LinkedIn:</strong> <a href="https://www.linkedin.com/in/mohamd-kamel-albitar-0b577b202/" target="_blank">linkedin.com/in/mohamd-kamel-albitar</a></p>
         </div>
+
+        <form id="contact-form" class="contact-form" novalidate aria-label="Kontaktformulär">
+            <div class="form-row">
+                <label for="cf-name" data-en="Name" data-sv="Namn">Namn</label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" required aria-required="true" />
+                <small class="error" id="cf-name-error" aria-live="polite"></small>
+            </div>
+            <div class="form-row">
+                <label for="cf-email" data-en="Email" data-sv="E-post">E-post</label>
+                <input id="cf-email" name="email" type="email" autocomplete="email" required aria-required="true" />
+                <small class="error" id="cf-email-error" aria-live="polite"></small>
+            </div>
+            <div class="form-row">
+                <label for="cf-message" data-en="Message" data-sv="Meddelande">Meddelande</label>
+                <textarea id="cf-message" name="message" rows="5" required aria-required="true"></textarea>
+                <small class="error" id="cf-message-error" aria-live="polite"></small>
+            </div>
+            <input type="text" id="cf-website" name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <div class="form-actions">
+                <button type="submit" class="btn" data-en="Open Email Client" data-sv="Öppna e‑postklient">Öppna e‑postklient</button>
+                <button type="button" id="copy-message" class="btn secondary" data-en="Copy Message" data-sv="Kopiera meddelande">Kopiera meddelande</button>
+                <span class="form-status" role="status" aria-live="polite"></span>
+            </div>
+        </form>
     </section>
 
     <footer>
@@ -69,4 +135,3 @@ data-sv="Hej! Jag är M-Kamel Albitar, en passionerad programmeringsstudent. Utf
     <script src="script.js"></script>
 </body>
 </html>
-
