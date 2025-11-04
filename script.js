@@ -1,12 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
     const certifications = [
         {
+        title: "Leadership Essentials Certificate",
+        issuer: "Cornerstone OnDemand Foundation",
+        date: "2025",
+        url: "Leadership_essentials",
+        logo: "Cornerstone.png",
+        verifyUrl: ""
+    },
+        {
         title: "CS50 Cybersecurity",
         issuer: "Harvard.edu",
         date: "2025",
         url: "CS50CY.pdf",
         logo: "harvard_logo.png",
-        verifyUrl: ""
+        verifyUrl: "https://cs50.harvard.edu/certificates/1b65358c-2c07-409a-a442-5881e37780c3"
     },
         {
         title: "CS50",
@@ -14,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         date: "August 2024",
         url: "Cs50.pdf",
         logo: "harvard_logo.png",
-        verifyUrl: ""
+        verifyUrl: "https://certificates.cs50.io/536b1726-f325-49ff-8d67-206d66a2a9e1.pdf?size=letter"
     },
     {
         title: "Data Analysis with Python",
@@ -22,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         issuer: "cognitiveclass.ai",
         date: "2023-12-28",
         logo: "cognitiveclass_logo.png",
-        verifyUrl: ""
+        verifyUrl: "https://courses.cognitiveclass.ai/certificates/6850ae965ffc47308b40fd3d8cf0bb9e"
     },
     {
         title: "Protect Systems from Penetrations",
