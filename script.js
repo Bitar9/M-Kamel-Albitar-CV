@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
         title: "Leadership Essentials Certificate",
         issuer: "Cornerstone OnDemand Foundation",
         date: "2025",
-        url: "Leadership_essentials",
-        logo: "Cornerstone.png",
+        url: "Leadership_essentials.pdf",
+        logo: "Cornerstone.jpg",
         verifyUrl: ""
     },
         {
