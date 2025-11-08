@@ -1,6 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const certifications = [
         {
+        title: "Inbound Marketing",
+        issuer: "HubSpot Academy",
+        date: "2025",
+        url: "certificates/MarketingInbound.png",
+        logo: "HubSpot-Academy-Logo-1-.png",
+        verifyUrl: "https://app-eu1.hubspot.com/academy/achievements/jf0w4jp5/en/1/mohamed-na/inbound-marketing"
+    },
+        {
         title: "Leadership Essentials Certificate",
         issuer: "Cornerstone OnDemand Foundation",
         date: "2025",
