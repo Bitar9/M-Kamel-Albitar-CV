@@ -1,6 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const certifications = [
         {
+        title: "Cybersecurity Operations",
+        issuer: "Cisco Networking Academy",
+        date: "2026-01-04",
+        url: "certificates/Cisco_Cybersecurity_Albitar.pdf",
+        logo: "cisco_logo.png",
+        verifyUrl: "https://www.credly.com/badges/6045c080-1d3e-4525-a18f-b1778b2f56f9/linked_in_profile" // Leave empty or add the Credly link if you have one
+    },
+        {
         title: "Inbound Marketing",
         issuer: "HubSpot Academy",
         date: "2025",
