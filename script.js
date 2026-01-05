@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         title: "Cybersecurity Operations",
         issuer: "Cisco Networking Academy",
         date: "2026-01-04",
-        url: "Cicso Networking Academy CyberS.pdf",
+        url: "CicsoNetworkingAcademyCyberS.pdf",
         logo: "cisco_logo.png",
         verifyUrl: "https://www.credly.com/badges/6045c080-1d3e-4525-a18f-b1778b2f56f9/linked_in_profile" // Leave empty or add the Credly link if you have one
     },
